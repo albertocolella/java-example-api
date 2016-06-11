@@ -1,0 +1,19 @@
+apply plugin: 'application'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+   compile project(':app')
+  // compile project(':java-rest-api')
+}
+    
+// mainClassName = project(':app').mainClassName
+// mainClassName = project(':app').ext.mainClassName
+mainClassName = "com.albertocolella.example_api.App"
+
+project(':java-rest-api') {
+    ext.httpPort = 7071
+}
