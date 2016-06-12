@@ -15,5 +15,6 @@ dependencies {
 mainClassName = "com.albertocolella.example_api.App"
 
 project(':java-rest-api') {
-    ext.httpPort = 7071
+	def appDir = project(':app').projectDir
+    ext.customPropsFile = "$appDir/config.properties"
 }
